@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block body %}
+       <script>
+
+        function fillbox(arg_text,seed_txt){
+            // seed_txt=seed_txt.replace('^','\\n')
+            document.getElementById("seed").value=seed_txt+arg_text;
+        }
+    </script>
+<!--
+
+<link href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+
+      $(function() {
+        $('#seed').bind('click', function() {
+
+          $('#result').append('<div class="spinner-border" id="loading-image" role="status"><span class="visually-hidden"></span></div>')
+        $.postJSON('/autocomplete', {
+
+          q: $('input[name="seed"]').val(),
+        }, function(data) {
+           $('#loading-image').hide();
+          // $("#result").append(data.tagName);
+           $('#result').append('<li class="list-group-item link-class">'+value.tagName+'</li>');
+
+                   });
+
+        return false;
+        });
+      });
+    </script>
+</script>
+ -->  <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{url_for('static',filename='img/home-bg.jpg')}}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{params['blog_name']}}</h1>
+              <span class="subheading">{{params['tag_line']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <!--<a href="post.html">-->
+              <h2 class="post-title">
+                Tell us your ideas of poetry here!
+              </h2><br>
+              <form autocomplete="off" method="POST">
+              
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">Authors</label>
+                  <select class="form-control" id="author" name="author">
+                      <option>Shakespeare</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                  </select>
+              </div>
+        
+              <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Seed</label>
+                  <textarea class="form-control "  id="seed" name='seed' placeholder="{{seed_text}}"  rows="3"></textarea>
+                  <!-- <div class="d-grid gap-3 d-md-block " id="result"></div> -->
+                  <button type="submit" class="btn btn-primary" id="sendMessageButton">Suggest &rarr;</button>
+
+                 
+              </div>
+
+              <div class="clearfix">
+
+            
+            </div>
+
+              </form>
+              
+              <div>
+                {% for item in results %}
+                <pre class="btn btn-outline-primary" onclick='fillbox("{{item}}","{{seed_text}}");'>{{item}}</pre>
+                {% endfor %}
+              </div>
+              
+               <!--<h3 class="post-subtitle">
+                Problems look mighty small from 150 miles up
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 24, 2019</p>-->
+          
+            <!-- Pager -->
+                  <!--                <pre class="btn btn-outline-primary" onclick='fillbox("{{results[0]}}","{{seed_text}}");'>{{results[0]}}</pre>
+                <pre class="btn btn-outline-primary" onclick="fillbox('{{results[1]}}','{{seed_text}}');">{{results[1]}}</pre>
+                <pre class="btn btn-outline-primary" onclick="fillbox('{{results[2]}}','{{seed_text}}');">{{results[2]}}</pre>
+  -->
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

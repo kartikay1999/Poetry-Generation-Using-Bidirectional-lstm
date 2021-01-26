@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+
+</script>
+  <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{url_for('static',filename='img/home-bg.jpg')}}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{params['blog_name']}}</h1>
+              <span class="subheading">{{params['tag_line']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <!--<a href="post.html">-->
+              <h2 class="post-title" align="center">
+                Tell us your ideas of poetry here!
+              </h2><br>
+                <div class="d-grid gap-3 d-md-block" align="center">
+                  <button class="btn btn-light btn-lg" ><a href="/generate_poem">I want to Generate a Poem</a></button>
+                  <button class="btn btn-light btn-lg"><a href="/suggestive"> I just want suggestions</a></button>
+                </div>
+
+              <br>
+              <div><pre>{{text}}</pre></div>
+              <!--<h3 class="post-subtitle">
+                Problems look mighty small from 150 miles up kya karna h bata
+              </h3>z
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 24, 2019</p>-->
+          </div>
+          
+          <!-- Pager -->
+          
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+
+
+<input class="form-control"  id="exampleDataList" placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="San Francisco">
+  <option value="New York">
+  <option value="Seattle">
+  <option value="Los Angeles">
+  <option value="Chicago">
+</datalist>

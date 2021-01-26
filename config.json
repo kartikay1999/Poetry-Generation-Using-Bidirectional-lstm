@@ -1,0 +1,19 @@
+{
+	
+	"params":
+	{
+		"local_server":"True",
+		"local_uri":"mysql://root:@localhost/flaskblog",
+		"prod_uri":"mysql://root:@localhost/flaskblog",
+		"fb_url":"https://www.facebook.com/codingthunder",
+		"blog_name":"Poetry Paradise",
+		"tag_line":"A rythemic creation of words.",
+		"gmail_user":"Info.poetryparadise@gmail.com",
+		"gmail_pwd":"PrekshNKV",
+		"about_text":"Our project is based on using Bi-directional LSTM (Long Short Term Memory), variant of RNN, to generate poetry in English language by feeding it a huge corpus of poems of renowned poets compiled specifically for the research. Our model has two layers with 256 units in each. We are able to analyse the overfitting nature of LSTM through our research.",
+		"no_of_posts":2,
+		"admin_user":"qwerty@q",
+		"userpass":"qwerty",
+		"upload_location":"C:\\Users\\kartikay\\Desktop\\PY files\\Flask\\static"
+	}
+}

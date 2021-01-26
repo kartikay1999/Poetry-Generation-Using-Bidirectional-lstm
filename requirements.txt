@@ -1,0 +1,9 @@
+Keras==2.4.3
+Flask==1.1.2
+Werkzeug==1.0.1
+Flask_SQLAlchemy==2.4.4
+Flask_Mail==0.9.1
+tqdm==4.47.0
+gunicorn==19.0.0
+tensorflow-cpu==2.1.0
+pickle5==0.0.11

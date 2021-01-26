@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static',filename='img/about-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>About Us</h1>
+            <span class="subheading">This is what we do.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Main Content -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h4>Generating Poetry Through Artificial Intelligence</h4>
+        <p>
+          Presenting you an artificial intelligence that generates poems / helps your writer's block through suggestions to help you understand and write poetry with great ease.
+          <ul>
+            <li>
+              <a href="\generate_poem">Generation</a> - Generate Poems by giving us a word/sentence/phrase as a seed and the length of the poem you need. 
+            </li>
+            <br>
+          <li>
+            <a href="\suggestive">Poetic Keyboard</a> - As you write a poem yourself we will help you complete your poem through a suggestive keyboard that will provide you with the next few words.
+          </li>
+
+          </ul>
+
+        </p>
+        <h4>POETRY GENERATION USING BI-DIRECTIONAL LSTM</h4>
+        <p> Our project is based on using Bi-directional LSTM (Long Short Term Memory), variant of RNN, to generate poetry in English language by feeding it a huge corpus of poems of renowned poets compiled specifically for the research. Our model has two layers with 256 units in each. We are able to analyse the overfitting nature of LSTM through our research.
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
