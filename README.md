@@ -9,4 +9,3 @@ Model Training- Bidirectional LSTM (Keras, Tensorflow) <br>
 Backend- Flask <br>
 Frontend - HTML, CSS, Bootstrap
 
-![alt text](https://github.com/kartikay1999/Poetry-Generation-Using-Bidirectional-lstm/blob/master/Capture.PNG)
