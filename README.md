@@ -1,4 +1,6 @@
 # Poetry-Generation-Using-Bidirectional-lstm
+A poetic text generation model using Bi-directional LSTM Model trained to generate shakespeare style poetry.
+
 
 A screenshot of the generative page of the website
 
